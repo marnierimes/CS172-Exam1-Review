@@ -14,7 +14,10 @@ int Dice::Roll()
 	return num;
 }
 
-int Dice::GetRoll();
+int Dice::GetRoll(int newRoll)
+{
+	
+}
 
 int Dice::GetSides(int newSides)
 {
