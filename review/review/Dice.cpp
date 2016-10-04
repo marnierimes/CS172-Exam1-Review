@@ -3,10 +3,21 @@
 #include<cstdlib>
 #include"Dice.h"
 
-Dice(int sides);
+Dice(sides);
 
-int Roll();
 
-int GetRolls();
+int Dice::Roll()
+{
+	int num;
+	srand(time(NULL));
+	num = rand() % 6;
+	return num;
+}
 
-int GetSides();
+int Dice::GetRoll();
+
+int Dice::GetSides(int newSides)
+{
+	int sides = newSides;
+}
+
