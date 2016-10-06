@@ -27,5 +27,5 @@ int main()
 	}
 	if (passed)
 		cout << "Passed roll test" << endl; //Should output this message
-	cout << d.GetRoll() << endl; //Should output 101
+	cout << d.GetRolls() << endl; //Should output 101
 }

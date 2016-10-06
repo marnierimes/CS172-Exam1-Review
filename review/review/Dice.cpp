@@ -1,26 +1,33 @@
-#include<iostream>
-#include<ctime>
-#include<cstdlib>
-#include"Dice.h"
+#include "Dice.h"
+#include <iostream>
+#include <cstdlib>
 
-Dice(sides);
+Dice::Dice(int sides)
+{
+	//Check that the number of sides is valid
+	if (sides <= 0)
+	{
+		sides = 6;
+	}
 
+	numSides = sides;
+	numRolls = 0;
+}
 
 int Dice::Roll()
 {
-	int num;
-	srand(time(NULL));
-	num = rand() % 6;
-	return num;
-}
+	//Increment the number of times this dice was rolled.
+	numRolls++;
 
-int Dice::GetRoll(int newRoll)
+	//The random number generate is seeded in main
+	return (rand() % numSides) + 1;
+}
+int Dice::GetRolls()
 {
-	
+	return numRolls;
 }
 
-int Dice::GetSides(int newSides)
+int Dice::GetSides()
 {
-	int sides = newSides;
+	return numSides;
 }
-
